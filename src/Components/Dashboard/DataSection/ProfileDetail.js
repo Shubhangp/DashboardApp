@@ -3,10 +3,11 @@ import { useSelector } from 'react-redux';
 
 const ProfileDetail = () => {
     const cartItems = useSelector((store) => store.profile.details);
+    const loginData = useSelector((store) => store.login.details);
 
   return (
     <div className="lg:w-[48%] md:w-[48%] w-[100%] bg-[#FFF] rounded-xl drop-shadow-3Xl py-7 pr-9 pl-10 mb-4 flex flex-col justify-center gap-14">
-        <h1 className='text-[#000] text-2xl leading-6 font-figtree font-semibold'>John Doe</h1>
+        <h1 className='text-[#000] text-2xl leading-6 font-figtree font-semibold'>{loginData[0].name}</h1>
         <div className='w-full flex flex-wrap gap-6 justify-between'>
             <div className='flex flex-col gap-6'>
                 <div className='flex items-center gap-4'>
